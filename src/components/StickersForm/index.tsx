@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form'
+import { Plus, Minus } from "phosphor-react"
 import styles from './StickersForm.module.css'
 
 type Techs = 'react' | 'vue' | 'angular'
@@ -19,6 +20,10 @@ export function StickersForm() {
   })
 
   const {handleSubmit, register, reset, setValue } = stickerForm
+
+  function handleIncrementAmount() {
+    // setValue('stickersAmount')
+  }
 
   function handleNewStickersOrder(data: StickerData) {
     const newStickerOrder: StickerData = {
@@ -43,29 +48,33 @@ export function StickersForm() {
       <div className={styles.stickersType}>
         <p>Quais stickers?</p> 
         <div>
-          <label htmlFor="checkAll">Marcar todos</label>
           <input type="checkbox" id="checkAll" onChange={checkAll} />
-        </div>s
+          <label htmlFor="checkAll">Marcar todos</label>
+        </div>
         <div>
-          <label htmlFor="">React</label>
           <input type="checkbox"  value="react" {...register('techs')} />
+          <label htmlFor="">React</label>
         </div>
         <div>
-          <label htmlFor="">Vue</label>
           <input type="checkbox"  value="vue" {...register('techs')} />
+          <label htmlFor="">Vue</label>
         </div>
         <div>
-          <label htmlFor="">Angular</label>
           <input type="checkbox"  value="angular" {...register('techs')} />
+          <label htmlFor="">Angular</label>
         </div>
       </div>
 
       <div className={styles.stickersAmount}>
         <p>Quantos stickers de cada?</p>
-        <div className="amountControl">
-          <button type="button">-</button>
-          <input type="number" id="" {...register('stickersAmount')} />
-          <button type="button">+</button>
+        <div className={styles.amountControl}>
+          <button type="button">
+            <Minus size={24} weight="bold" />
+          </button>
+          <input type="number" {...register('stickersAmount', {min: 1, max: 100})} />
+          <button type="button" onClick={handleIncrementAmount}>
+            <Plus size={24} weight="bold" />
+          </button>
         </div>
       </div>
 

@@ -4,8 +4,12 @@ import styles from './Header.module.css'
 
 export function Header() {
   return (
-    <header>
-      <h1>Formulário para compra de <strong>Pacote de Stickers</strong></h1>
+    <header className={styles.header}>
+      <div className={styles.title}>
+        <p>Formulário <br /> para compra de <span>Pacote de Stickers</span></p>
+      </div>
+
+      <img src={parcelImg} alt="" />
     </header>
   )
 }
