@@ -1,11 +1,14 @@
+import { Header } from './components/Header'
+import { StickersForm } from './components/StickersForm'
 import './styles/global.css'
 
 function App() {
 
   return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
+    <>
+      <Header />
+      <StickersForm />
+    </>
   )
 }
 
