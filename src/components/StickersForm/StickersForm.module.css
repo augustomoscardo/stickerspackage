@@ -1,5 +1,5 @@
 form {
-  padding: 0 2rem;
+  height: 100%;
   margin-top: 2rem;
 }
 
@@ -29,7 +29,7 @@ input[type='checkbox']:checked {
 }
 
 .stickersType {
-
+  padding: 0 2rem;
 }
 
 .stickersType div {
@@ -47,6 +47,7 @@ input[type='checkbox']:checked {
 
 .stickersAmount {
   margin-top: 2rem;
+  padding: 0 2rem;
 }
 
 .stickersAmount button {
@@ -89,7 +90,50 @@ input::-webkit-inner-spin-button {
 }
 
 .stickersInfo {
+  padding: 0 2rem;
   margin-top: 2rem;
 }
 
-.sendForm {}
+.stickersInfo textarea {
+  border: 1px solid var(--blue-500);
+  border-radius: 4px;
+  background: var(--gray-200);
+  padding: 16px 16px 0 16px;
+  resize: none;
+  width: 31.25rem;
+  height: 8.5rem;
+  outline: none;
+}
+
+.sendForm {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 2rem;
+  height: 6rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  background-color: var(--gray-200);
+}
+
+.sendForm button {
+  height: 2rem;
+  margin-right: 2rem;
+  padding: 0.5rem 2rem;
+  border: 0;
+  border-radius: 8px;
+  background-color: var(--blue-500);
+  color: var(--white);
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+.sendForm button:hover {
+  background-color: var(--blue-700);
+
+}

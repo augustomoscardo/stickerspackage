@@ -1,13 +1,13 @@
 .header {
   background: var(--blue-500);
 
-  height: 12rem;
+  height: 11.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  padding-left: 2.5rem;
+  padding: 0 2.5rem;
 }
 
 .title {
@@ -29,5 +29,5 @@
 }
 
 .header img {
-  padding-right: 2.5rem;
+  
 }

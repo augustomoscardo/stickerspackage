@@ -9,7 +9,7 @@ export function Header() {
         <p>Formulário <br /> para compra de <span>Pacote de Stickers</span></p>
       </div>
 
-      <img src={parcelImg} alt="" />
+      <img src={parcelImg} alt="Imagem de uma caixa de papelão para envio de encomendas" />
     </header>
   )
 }
